@@ -27,6 +27,7 @@ body {
   height: 100%;
   background: #000;
   font-family: arimo;
+  overflow: hidden;
 }
 
 main {
@@ -46,6 +47,15 @@ main {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 480px) {
+  .nav {
+    width: 100%;
+    height: 5%;
+  }
+  .nav h1 {
+    font-size: 1.3rem;
+  }
+}
 .nav h1 {
   color: var(--tri2);
 }
@@ -61,12 +71,24 @@ main {
 .nav button:active {
   scale: 0.95;
 }
+@media (max-width: 480px) {
+  .nav button {
+    font-size: 0.7rem;
+    padding: 4px 9px;
+    border-radius: 4px;
+  }
+}
 
 .mid {
   width: 100%;
   height: 90%;
   background: #765454;
   display: flex;
+}
+@media (max-width: 480px) {
+  .mid {
+    height: 95%;
+  }
 }
 
 .left {
@@ -82,6 +104,11 @@ main {
   position: relative;
   border-bottom: 2px solid var(--pri);
 }
+@media (max-width: 480px) {
+  .left .info {
+    height: 15%;
+  }
+}
 .left .info .star {
   display: flex;
   justify-content: center;
@@ -89,12 +116,17 @@ main {
   gap: 5px;
   margin-bottom: 1rem;
 }
+@media (max-width: 480px) {
+  .left .info .star {
+    display: none;
+  }
+}
 .left .info .star i {
   font-size: 1.4rem;
-  color: #FFE184;
+  color: #ffe184;
 }
 .left .info .star #hee {
-  color: #E44D25;
+  color: #e44d25;
 }
 .left .info .star1 {
   position: absolute;
@@ -104,12 +136,17 @@ main {
   font-weight: 300;
   width: 60%;
 }
+@media (max-width: 480px) {
+  .left .info .star1 {
+    display: none;
+  }
+}
 .left .info .star1 i {
   font-size: 1.4rem;
   color: #222831;
 }
 .left .info .star1 #hee {
-  color: #E44D25;
+  color: #e44d25;
   background: url("https://imgs.search.brave.com/rNgp_cU0GS-raj9Y45kj2OwZxtiJnfGaSwj-UNoRXuA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9naWZk/Yi5jb20vaW1hZ2Vz/L2hpZ2gvdGh1bmRl/ci00OTgteC0zNzMt/Z2lmLW1yYnd2YTlx/d29pYmIza3cuZ2lm.gif");
   color: transparent;
   background-clip: text;
@@ -125,12 +162,17 @@ main {
   font-weight: 300;
   width: 60%;
 }
+@media (max-width: 480px) {
+  .left .info .star2 {
+    display: none;
+  }
+}
 .left .info .star2 i {
   font-size: 1.4rem;
   color: #222831;
 }
 .left .info .star2 #hee {
-  color: #0170BA;
+  color: #0170ba;
   margin-right: 5px;
   background: url("https://imgs.search.brave.com/T6Cr3fFDo0ynQay_Pn0K2hC-YuZHymmccMcJMht9LTo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50ZW5vci5jb20v/OGZuZVZRV0xzUDRB/QUFBTS90aHVuZGVy/LWxpZ2h0bmluZy5n/aWY.gif");
   color: transparent;
@@ -148,6 +190,11 @@ main {
   font-weight: 300;
   width: 60%;
   height: 25px;
+}
+@media (max-width: 480px) {
+  .left .info .star3 {
+    display: none;
+  }
 }
 .left .info .star3 i {
   font-size: 1.4rem;
@@ -170,6 +217,12 @@ main {
   background: #000;
   overflow: hidden;
 }
+@media (max-width: 480px) {
+  .left .info .imgbox {
+    width: 60px;
+    height: 60px;
+  }
+}
 .left .info .imgbox img {
   width: 100%;
   height: 100%;
@@ -185,6 +238,11 @@ main {
   background-size: cover;
   font-weight: 800;
   background-position: bottom;
+}
+@media (max-width: 480px) {
+  .left .info h1 {
+    font-size: 16px;
+  }
 }
 .left .info i {
   font-size: 17px;
@@ -212,11 +270,25 @@ main {
   font-size: 15px;
   color: var(--pri);
 }
+@media (max-width: 480px) {
+  .left .goto .alltodo {
+    display: flex;
+    justify-content: center;
+  }
+  .left .goto .alltodo h2 {
+    display: none;
+  }
+}
 .left .goto .love {
   margin-top: 5.5rem;
   font-size: 7px;
   font-weight: 100;
   color: rgba(54, 53, 53, 0.6235294118);
+}
+@media (max-width: 480px) {
+  .left .goto .love {
+    margin-top: 17rem;
+  }
 }
 
 .right {
@@ -230,6 +302,11 @@ main {
   flex-wrap: wrap;
   gap: 17px;
   align-items: center;
+}
+@media (max-width: 480px) {
+  .right {
+    overflow: auto;
+  }
 }
 .right .full {
   width: 870px;
@@ -245,19 +322,40 @@ main {
   background-position: bottom;
   background-repeat: no-repeat;
 }
+@media (max-width: 480px) {
+  .right .full {
+    padding: 25px;
+  }
+}
 .right .full .date {
   font-size: 3rem;
+}
+@media (max-width: 480px) {
+  .right .full .date {
+    font-size: 2rem;
+  }
 }
 .right .full .day {
   font-size: 1.3rem;
   font-weight: 400;
 }
+@media (max-width: 480px) {
+  .right .full .day {
+    font-size: 1rem;
+  }
+}
 .right .full .city {
   font-size: 5rem;
-  margin-top: 4rem;
+  margin-top: 5rem;
   color: #e0aa84;
   font-weight: 600;
   mix-blend-mode: difference;
+}
+@media (max-width: 480px) {
+  .right .full .city {
+    font-size: 1.7rem;
+    margin-top: 11rem;
+  }
 }
 .right .full .city .state {
   font-size: 2rem;
@@ -266,9 +364,19 @@ main {
   font-weight: 400;
   mix-blend-mode: difference;
 }
+@media (max-width: 480px) {
+  .right .full .city .state {
+    font-size: 1rem;
+  }
+}
 .right .full .temp .deg {
   font-size: 4rem;
-  color: #1a1919;
+  color: rgba(26, 25, 25, 0.7803921569);
+}
+@media (max-width: 480px) {
+  .right .full .temp .deg {
+    font-size: 1rem;
+  }
 }
 .right .full .temp .allwph {
   font-size: 1.2rem;
@@ -280,13 +388,34 @@ main {
   color: rgb(0, 0, 0);
   margin-left: 0.2rem;
 }
+@media (max-width: 480px) {
+  .right .full .temp .allwph {
+    font-size: 0.6rem;
+    margin-left: 0rem;
+  }
+}
 .right .full .temp .timeyo {
-  margin-top: 5rem;
+  margin-top: 4rem;
+}
+@media (max-width: 480px) {
+  .right .full .temp .timeyo {
+    width: 100%;
+    margin-top: 9.5rem;
+  }
 }
 .right .full .temp .timeyo .h3 {
   font-size: 2rem;
   color: rgba(207, 202, 202, 0.3568627451);
   font-weight: 200;
+}
+@media (max-width: 480px) {
+  .right .full .temp .timeyo .h3 {
+    font-size: 1rem;
+    color: rgba(4, 4, 4, 0.763);
+    width: 100%;
+    margin-left: -11rem;
+    white-space: nowrap;
+  }
 }
 .right .elem {
   flex-shrink: 0;
@@ -320,11 +449,16 @@ main {
   top: 0;
   left: 0;
 }
-.right .allfullpage .allfullpage.active {
+.right .allfullpage:active {
   display: block;
 }
 .right .allfullpage #h1 {
   color: var(--tri2);
+}
+@media (max-width: 480px) {
+  .right .allfullpage #h1 {
+    font-size: 3rem;
+  }
 }
 .right .allfullpage h1 {
   font-size: 3rem;
@@ -353,12 +487,22 @@ main {
   gap: 20px;
   padding: 10px;
 }
+@media (max-width: 480px) {
+  .right .allfullpage .vache {
+    flex-direction: column;
+  }
+}
 .right .allfullpage .vache .l {
   width: 25%;
   height: 80%;
   background: var(--pri);
   border-radius: 12px;
   padding: 20px;
+}
+@media (max-width: 480px) {
+  .right .allfullpage .vache .l {
+    width: 100%;
+  }
 }
 .right .allfullpage .vache .l .form {
   display: flex;
@@ -410,6 +554,11 @@ main {
   gap: 10px;
   overflow: auto;
 }
+@media (max-width: 480px) {
+  .right .allfullpage .vache .r {
+    width: 100%;
+  }
+}
 .right .allfullpage .vache .r .intask {
   width: 100%;
   height: 50px;
@@ -448,6 +597,11 @@ main {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 480px) {
+  .right .mt .mtt {
+    display: fixed;
+  }
+}
 .right .mt .mtbox {
   width: 900px;
   height: 500px;
@@ -462,6 +616,13 @@ main {
   z-index: 99;
   position: absolute;
   border-radius: 20px;
+}
+@media (max-width: 480px) {
+  .right .mt .mtbox .mtboxer {
+    width: 300px;
+    height: 500px;
+    overflow: auto;
+  }
 }
 .right .mt .mtbox .mtboxer .up {
   color: rgba(245, 245, 245, 0.567);
@@ -493,6 +654,11 @@ main {
 .right .dp #dp {
   color: var(--tri2);
 }
+@media (max-width: 480px) {
+  .right .dp #dp {
+    font-size: 1.8rem;
+  }
+}
 .right .dp .dpbox {
   margin-top: 40px;
   background: var(--tri1);
@@ -505,6 +671,11 @@ main {
   gap: 12px;
   overflow: auto;
   scrollbar-width: none;
+}
+@media (max-width: 480px) {
+  .right .dp .dpbox {
+    margin-top: 5rem;
+  }
 }
 .right .dp .dpbox ::-webkit-scrollbar {
   display: none;
@@ -520,6 +691,11 @@ main {
   overflow: hidden;
   padding: 0px 10px;
   justify-content: center;
+}
+@media (max-width: 480px) {
+  .right .dp .dpin {
+    width: 97%;
+  }
 }
 .right .dp .dpin h4 {
   position: absolute;
@@ -543,6 +719,11 @@ main {
 }
 .right .pt h1 {
   color: var(--tri2);
+}
+@media (max-width: 480px) {
+  .right .pt h1 {
+    font-size: 1.9rem;
+  }
 }
 .right .pt .ptmain {
   width: 100%;
@@ -574,9 +755,19 @@ main {
   left: 145px;
   text-align: center;
 }
+@media (max-width: 480px) {
+  .right .pt .ptbox .work {
+    left: -30px;
+  }
+}
 .right .pt .ptbox h1 {
   color: #fefefe;
   font-size: 10rem;
+}
+@media (max-width: 480px) {
+  .right .pt .ptbox h1 {
+    font-size: 5rem;
+  }
 }
 .right .pt .ptbox .btns {
   display: flex;
@@ -590,6 +781,11 @@ main {
   padding: 5px 13px;
   border-radius: 10px;
   border: none;
+}
+@media (max-width: 480px) {
+  .right .pt .ptbox .btns .btn {
+    font-size: 1rem;
+  }
 }
 .right .pt .ptbox .btns .btn:active {
   scale: 0.95;
