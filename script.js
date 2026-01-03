@@ -237,7 +237,7 @@ pomodoro();
 
 import KEY from "./Dets/det.js";
 function weathertime() {
-  console.log(KEY);
+ 
 
   let realdate = document.querySelector(".date");
   let realday = document.querySelector(".day");
