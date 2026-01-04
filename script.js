@@ -161,8 +161,10 @@ function pomodoro() {
   let time = document.querySelector(".time");
   let work = document.querySelector(".work");
   let workseen = true;
-
+  let done=null;
   let timer = 1500;
+
+  let isRunning = false;
   function updatetimer() {
     let min = String(Math.floor(timer / 60)).padStart(2, "0");
     let sec = String(timer % 60).padStart(2, "0");
@@ -182,31 +184,24 @@ function pomodoro() {
   }
 
   function starttimer() {
-    timer = 1500;
-    if (workseen) {
-      done = setInterval(() => {
-        if (timer > 0) {
-          timer--;
-          updatetimer();
-        } else {
-          start.style.opacity = 1;
-          clearInterval(done);
-          workseen = false;
-        }
-      }, 1000);
+  if (isRunning) return; 
+
+  isRunning = true;
+
+  done = setInterval(() => {
+    if (timer > 0) {
+      timer--;
+      updatetimer();
     } else {
-      timer = 300;
-      done = setInterval(() => {
-        if (timer > 0) {
-          timer--;
-          updatetimer();
-        } else {
-          start.style.opacity = 1;
-          workseen = true;
-          clearInterval(done);
-        }
-      }, 1000);
+      clearInterval(done);
+      isRunning = false;
+
+      workseen = !workseen;
+      timer = workseen ? 1500 : 300;
+
+      start.style.opacity = 1;
     }
+  }, 1000);
   }
 
   start.addEventListener("click", function () {
@@ -218,12 +213,14 @@ function pomodoro() {
   pause.addEventListener("click", function () {
     clearInterval(done);
     updatetimer();
-
+     isRunning = false;   
     pause.style.opacity = 0.3;
     start.style.opacity = 1;
   });
 
+
   reset.addEventListener("click", function () {
+     isRunning = false;   
     timer = 1500;
     clearInterval(done);
     updatetimer();
